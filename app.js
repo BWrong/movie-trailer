@@ -7,7 +7,7 @@ const logger = require('koa-logger');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
-const demo = require('./routes/demo');
+const crawler = require('./routes/crawler');
 
 const app = new Koa();
 // error handler
@@ -36,7 +36,7 @@ app.use(async (ctx, next) => {
 // routes
 app.use(index.routes(), index.allowedMethods());
 app.use(users.routes(), users.allowedMethods());
-app.use(demo.routes(), demo.allowedMethods());
+app.use(crawler.routes(), crawler.allowedMethods());
 
 // error-handling
 app.on('error', (err, ctx) => {

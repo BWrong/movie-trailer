@@ -14,4 +14,8 @@ block content
               p.card-desc 电影描述
 block script
   script.
-    alert(1111)
+    $(function(){
+      $('.card-title').on('click',function(){
+        console.log(111)
+      })
+    })
